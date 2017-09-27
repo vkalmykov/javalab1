@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <restaurant>
-    <date>
-        <day>15</day>
-        <month>5</month>
-        <year>2010</year>
+    <date day="15" month = "09" year="2000">
+        <order>
+            <officiant firstname="Ivan" secondname="Ivanov"/>
+            <item name="Borsch" cost="50"/>
+            <item name="Vodka" cost="150"/>
+            <item name="Bred" cost="3"/>
+            <totalcost>203</totalcost>
+        </order>
+    </date>
+    <date day="16" month="10" year="2001">
+        <order>
+            <officiant firstname="Tom" secondname="Petrov"/>
+            <item name="Salad" cost="40"/>
+            <item name="Coffee" cost="73"/>
+            <totalcost>113</totalcost>
+        </order>
+    </date>
+    <date day="17" month="09" year="2000">
+        <order>
+            <officiant firstname="Ivan" secondname="Ivanov"/>
+            <item name="Tea" cost="25"/>
+            <item name="Pizza" cost="56"/>
+        </order>
     </date>
 </restaurant>
