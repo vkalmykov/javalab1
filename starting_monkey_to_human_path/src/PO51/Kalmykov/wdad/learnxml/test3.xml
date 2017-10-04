@@ -5,12 +5,7 @@
             <item cost="200" name="Borsch"/>
             <item cost="150" name="Vodka"/>
             <item cost="3" name="Bred"/>
-        </order>
-        <order>
-            <officiant firstname="Ivan" secondname="Sidorov"/>
-            <item cost="200" name="Borsch"/>
-            <item cost="150" name="Vodka"/>
-            <item cost="3" name="Bred"/>
+            <totalcost>353</totalcost>
         </order>
     </date>
     <date day="16" month="10" year="2001">
@@ -26,6 +21,7 @@
             <officiant firstname="Ivan" secondname="Ivanov"/>
             <item cost="25" name="Tea"/>
             <item cost="56" name="Pizza"/>
+            <totalcost>81</totalcost>
         </order>
     </date>
 </restaurant>
