@@ -1,6 +1,7 @@
 package PO51.Kalmykov.wdad.data.managers;
 
 import java.io.File;
+import java.util.Properties;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
@@ -80,6 +81,25 @@ public class PreferencesManager {
         StreamResult result = new StreamResult(new File(PATH_XML));
         t.transform(source, result);
     }
-}   
+    
+    public void setProperty(String key, String value) {
+        
+    }
+    public String getProperty(String key) {
+        
+    }
+    public void setProperties(Properties prop) {
+        
+    }
+    public Properties getProperties() {
+        
+    }
+    public void addBindedObject(String name, String className) {
+        
+    }
+    public void removeBindedObject(String name) {
+        
+    }
+}
 
 
