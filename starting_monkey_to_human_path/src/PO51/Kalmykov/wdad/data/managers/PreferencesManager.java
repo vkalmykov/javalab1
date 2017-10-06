@@ -1,6 +1,8 @@
 package PO51.Kalmykov.wdad.data.managers;
 
+import PO51.Kalmykov.wdad.utils.PreferencesConstantManager;
 import java.io.File;
+import java.util.Enumeration;
 import java.util.Properties;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -83,22 +85,34 @@ public class PreferencesManager {
     }
     
     public void setProperty(String key, String value) {
-        
+        doc.getElementsByTagName(getTag(key)).item(0).setTextContent(value);
     }
     public String getProperty(String key) {
-        
+        return doc.getElementsByTagName(getTag(key)).item(0).getTextContent();
     }
     public void setProperties(Properties prop) {
-        
+        Enumeration e = prop.elements();
+        Enumeration keys = prop.keys();
+        while(e.hasMoreElements())
+        {
+            doc.getElementsByTagName(getTag((String) keys.nextElement())).item(0).setTextContent((String) e.nextElement());
+        }
     }
     public Properties getProperties() {
+        Properties prop = new Properties();
         
+        return prop;
     }
     public void addBindedObject(String name, String className) {
         
     }
     public void removeBindedObject(String name) {
         
+    }
+    
+    private String getTag(String s) {
+        String[] sa = s.split("\\.");
+        return sa[sa.length - 1];
     }
 }
 
