@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><restaurant>
+    <date>
+        <day>15</day>
+        <month>9</month>
+        <year>2000</year>
+        <officiant firstname="Ivan" secondname="Ivanov"/>
+        <item cost="200" name="Borsch"/>
+        <item cost="150" name="Vodka"/>
+        <item cost="3" name="Bred"/>
+    </date>
+</restaurant>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><restaurant>
+    <date day="15" month="9" year="2000">
+        <order>
+            <officiant firstname="Ivan" secondname="Ivanov"/>
+            <item cost="200" name="Borsch"/>
+            <item cost="150" name="Vodka"/>
+            <item cost="3" name="Bred"/>
+        </order>
+        <order>
+            <officiant firstname="Ivan" secondname="Sidorov"/>
+            <item cost="200" name="Borsch"/>
+            <item cost="150" name="Vodka"/>
+            <item cost="3" name="Bred"/>
+        </order>
+    </date>
+    <date day="16" month="10" year="2001">
+        <order>
+            <officiant firstname="Tom" secondname="Petrov"/>
+            <item cost="40" name="Salad"/>
+            <item cost="73" name="Coffee"/>
+            <totalcost>113</totalcost>
+        </order>
+    </date>
+    <date day="17" month="9" year="2000">
+        <order>
+            <officiant firstname="Ivan" secondname="Ivanov"/>
+            <item cost="25" name="Tea"/>
+            <item cost="56" name="Pizza"/>
+        </order>
+    </date>
+</restaurant>
