@@ -12,6 +12,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 public class PreferencesManager {
     private static volatile PreferencesManager instance;
@@ -100,14 +102,32 @@ public class PreferencesManager {
     }
     public Properties getProperties() {
         Properties prop = new Properties();
+        prop.put(PreferencesConstantManager.CREATEREGISTRY, doc.getElementsByTagName(getTag(PreferencesConstantManager.CREATEREGISTRY)).item(0).getTextContent());
+        prop.put(PreferencesConstantManager.CLASSPROVIDER, doc.getElementsByTagName(getTag(PreferencesConstantManager.CLASSPROVIDER)).item(0).getTextContent());
+        prop.put(PreferencesConstantManager.POLICYPATH, doc.getElementsByTagName(getTag(PreferencesConstantManager.POLICYPATH)).item(0).getTextContent());
+        prop.put(PreferencesConstantManager.REGISTRYADDRESS, doc.getElementsByTagName(getTag(PreferencesConstantManager.REGISTRYADDRESS)).item(0).getTextContent());
+        prop.put(PreferencesConstantManager.USECODEBASEONLY, doc.getElementsByTagName(getTag(PreferencesConstantManager.USECODEBASEONLY)).item(0).getTextContent());
+        prop.put(PreferencesConstantManager.REGISTRYPORT, doc.getElementsByTagName(getTag(PreferencesConstantManager.REGISTRYPORT)).item(0).getTextContent());
         
         return prop;
     }
     public void addBindedObject(String name, String className) {
-        
+        Element e = (Element) doc.createElement("bindedobject");
+        e.setAttribute("name", name);
+        e.setAttribute("class", className);
+        doc.getElementsByTagName("server").item(0).appendChild(e);
     }
     public void removeBindedObject(String name) {
-        
+        NodeList nodeList = doc.getElementsByTagName("bindedobject");
+        Element e;
+        for (int i=0; i<nodeList.getLength(); i++)
+        {
+            e = (Element) nodeList.item(i);
+            if (e.getAttribute("name").equals(name))
+            {
+                doc.getElementsByTagName("server").item(0).removeChild(e);
+            }
+        }
     }
     
     private String getTag(String s) {
