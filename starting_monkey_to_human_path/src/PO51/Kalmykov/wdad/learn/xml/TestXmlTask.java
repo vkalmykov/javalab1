@@ -1,4 +1,4 @@
-package PO51.Kalmykov.wdad.learnxml;
+package PO51.Kalmykov.wdad.learn.xml;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

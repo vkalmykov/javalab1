@@ -1,4 +1,4 @@
-package PO51.Kalmykov.wdad.learnxml;
+package PO51.Kalmykov.wdad.learn.xml;
 
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
