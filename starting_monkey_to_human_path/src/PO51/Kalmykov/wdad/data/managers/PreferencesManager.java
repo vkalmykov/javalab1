@@ -34,46 +34,50 @@ public class PreferencesManager {
         }
         return instance;
     }
-    
+    @Deprecated
     public String getCreateregistry() {
         return doc.getElementsByTagName("createregistry").item(0).getTextContent();
     }
-    
+    @Deprecated
     public void setCreateregistry(String createregistry) {
         doc.getElementsByTagName("createregistry").item(0).setTextContent(createregistry);
     }
-    
+    @Deprecated
     public String getRegistryaddress() {
         return doc.getElementsByTagName("registryaddress").item(0).getTextContent();
     }
     public void setRegistryaddress(String registryaddress) {
         doc.getElementsByTagName("registryaddress").item(0).setTextContent(registryaddress);
     }
-    
+    @Deprecated
     public String getRegistryport() {
         return doc.getElementsByTagName("registryport").item(0).getTextContent();
     }
+    @Deprecated
     public void setRegistryport(String registryport) {
         doc.getElementsByTagName("registryport").item(0).setTextContent(registryport);
     }
-    
+    @Deprecated
     public String getPolicypath() {
         return doc.getElementsByTagName("policypath").item(0).getTextContent();
     }
+    @Deprecated
     public void setPolicypath(String policypath) {
         doc.getElementsByTagName("policypath").item(0).setTextContent(policypath);
     }
-    
+    @Deprecated
     public String getUsecodebaseonly() {
         return doc.getElementsByTagName("usecodebaseonly").item(0).getTextContent();
     }
+    @Deprecated
     public void setUsecodebaseonly(String usecodebaseonly) {
         doc.getElementsByTagName("usecodebaseonly").item(0).setTextContent(usecodebaseonly);
     }
-    
+    @Deprecated
     public String getClassprovider() {
         return doc.getElementsByTagName("classprovider").item(0).getTextContent();
     }
+    @Deprecated
     public void setClassprovider(String classprovider) {
         doc.getElementsByTagName("classprovider").item(0).setTextContent(classprovider);
     }
