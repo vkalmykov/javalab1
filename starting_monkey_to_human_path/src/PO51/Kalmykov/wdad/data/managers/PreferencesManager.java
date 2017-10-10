@@ -19,11 +19,12 @@ public class PreferencesManager {
     private static volatile PreferencesManager instance;
     private final Document doc;
     private static final String PATH_XML = "src\\PO51\\Kalmykov\\wdad\\resources\\configuration\\appconfig.xml";
-
+    private static final File FILE = new File(PATH_XML);
+    
     private PreferencesManager() throws Exception {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = dbf.newDocumentBuilder();
-        doc = db.parse(new File(PATH_XML));
+        doc = db.parse(FILE);
     }
     
     public static PreferencesManager getInstance() throws Exception {
@@ -86,7 +87,7 @@ public class PreferencesManager {
     public void writeXml() throws TransformerException {                       
         Transformer t = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File(PATH_XML));
+        StreamResult result = new StreamResult(FILE);
         t.transform(source, result);
     }
     
