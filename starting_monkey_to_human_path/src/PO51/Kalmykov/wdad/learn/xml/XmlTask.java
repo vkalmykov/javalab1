@@ -13,11 +13,9 @@ import javax.xml.transform.stream.StreamResult;
 public class XmlTask {
     private final File file;
     private final Document doc;
-    private final String path;
-    
+
     public XmlTask(String path) throws Exception {
-        this.path = path;
-        file = new File(this.path);
+        file = new File(path);
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = dbf.newDocumentBuilder();
         doc = db.parse(file);
@@ -119,7 +117,7 @@ public class XmlTask {
     private void writeXml() throws TransformerException {                       //приватный метод записи в xml
         Transformer t = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File(path));
+        StreamResult result = new StreamResult(file);
         t.transform(source, result);
     }
 }
