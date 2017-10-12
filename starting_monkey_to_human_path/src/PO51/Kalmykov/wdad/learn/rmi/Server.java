@@ -5,7 +5,7 @@ import java.rmi.*;
 import java.rmi.server.*;
 
 public class Server {
-    public static void main(String[] s) throws RemoteException {
+    public static void main(String[] s) throws RemoteException, Exception {
         PreferencesManager preferencesManager = PreferencesManager.getInstance();
         
     }
