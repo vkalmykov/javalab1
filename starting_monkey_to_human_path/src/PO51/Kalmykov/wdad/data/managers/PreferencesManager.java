@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
 public class PreferencesManager {
     private static volatile PreferencesManager instance;
     private final Document doc;
-    private static final String PATH_XML = "src\\PO51\\Kalmykov\\wdad\\resources\\configuration\\appconfig.xml";
+    private static final String PATH_XML = "PO51\\Kalmykov\\wdad\\resources\\configuration\\appconfig.xml";
     private static final File FILE = new File(PATH_XML);
     
     private PreferencesManager() throws Exception {
@@ -47,6 +47,7 @@ public class PreferencesManager {
     public String getRegistryaddress() {
         return doc.getElementsByTagName("registryaddress").item(0).getTextContent();
     }
+    @Deprecated
     public void setRegistryaddress(String registryaddress) {
         doc.getElementsByTagName("registryaddress").item(0).setTextContent(registryaddress);
     }
@@ -135,6 +136,10 @@ public class PreferencesManager {
         }
     }
     
+    public String getExecutorName() {
+        Element el = (Element) doc.getElementsByTagName("bindedobject").item(0);
+        return el.getAttribute("name");
+    }
     private String getTag(String s) {
         String[] sa = s.split("\\.");
         return sa[sa.length - 1];

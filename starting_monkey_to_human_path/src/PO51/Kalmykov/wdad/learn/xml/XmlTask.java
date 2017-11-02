@@ -13,7 +13,6 @@ import javax.xml.transform.stream.StreamResult;
 public class XmlTask {
     private final File file;
     private final Document doc;
-    
     public XmlTask(String path) throws Exception {
         file = new File(path);
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
