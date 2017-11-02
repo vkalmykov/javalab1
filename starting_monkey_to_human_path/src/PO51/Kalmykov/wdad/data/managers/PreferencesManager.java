@@ -140,7 +140,6 @@ public class PreferencesManager {
         Element el = (Element) doc.getElementsByTagName("bindedobject").item(0);
         return el.getAttribute("name");
     }
-    
     private String getTag(String s) {
         String[] sa = s.split("\\.");
         return sa[sa.length - 1];
